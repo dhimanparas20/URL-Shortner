@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'images/link.png' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="gradient"></div>
+    <div class="shortener-container">
+        <h1>URL Shortener</h1>
+        <form id="url-form">
+            <input type="text" id="long_url" class="form-control" placeholder="Enter your long URL here">
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-primary">Shorten URL</button>
+                <button type="reset" class="btn btn-secondary">Reset</button>
+            </div>
+        </form>
+        <div id="shortened-url"></div>
+        <div id="full_short-url"></div>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
