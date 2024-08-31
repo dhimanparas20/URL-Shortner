@@ -130,6 +130,7 @@ REST_FRAMEWORK = {
 STATICFILES_DIRS = [BASE_DIR / "app/static"]  # new
 STATIC_ROOT = path.join(BASE_DIR, 'staticfiles')
 
+CORS_ALLOW_ALL_ORIGINS=True
 CSRF_TRUSTED_ORIGINS = [
     'https://mst.zeabur.app',
 ]
